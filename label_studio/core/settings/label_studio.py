@@ -15,7 +15,9 @@ ADD_DEFAULT_ML_BACKENDS = False
 
 LOGGING['root']['level'] = get_env('LOG_LEVEL', 'WARNING')
 
-DEBUG = get_bool_env('DEBUG', False)
+# Added as custom implementation: error - not loading all styles and fonts with DEBUG = False
+DEBUG = get_bool_env('DEBUG', True)
+# DEBUG = get_bool_env('DEBUG', False)
 
 DEBUG_PROPAGATE_EXCEPTIONS = get_bool_env('DEBUG_PROPAGATE_EXCEPTIONS', False)
 
