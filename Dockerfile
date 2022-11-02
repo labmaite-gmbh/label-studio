@@ -71,6 +71,11 @@ RUN python3 label_studio/manage.py collectstatic --no-input && \
 
 ENV HOME=/label-studio
 
+# Added as custom implementation to prevent:
+# ImportError: libGL.so.1: cannot open shared object file: No such file or directory
+RUN apt-get update && apt-get install libgl1 -y
+RUN apt-get install libglib2.0-0 -y
+
 EXPOSE 8080
 
 ENTRYPOINT ["./deploy/docker-entrypoint.sh"]

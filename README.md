@@ -25,12 +25,23 @@ Have a custom dataset? You can customize Label Studio to fit your needs. Read an
 
 Install Label Studio locally, or deploy it in a cloud instance. Also you can try [Label Studio Teams](https://app.heartex.com).
 
+- [Install Labmaite Implementation](#install-labmaite-implementation)
 - [Install locally with Docker](#install-locally-with-docker)
 - [Run with Docker Compose (Label Studio + Nginx + PostgreSQL)](#run-with-docker-compose)
 - [Install locally with pip](#install-locally-with-pip)
 - [Install locally with Anaconda](#install-locally-with-anaconda)
 - [Install for local development](#install-for-local-development)
 - [Deploy in a cloud instance](#deploy-in-a-cloud-instance)
+
+
+### Install Labmaite Implementation
+To build a local image with the custom changes, run:
+```bash
+DOCKER_BUILDKIT=1 docker build . -t label-studio
+docker run -p80:8080 label-studio
+```
+Change p80 to the desired port.
+
 
 ### Install locally with Docker
 Official Label Studio docker image is [here](https://hub.docker.com/r/heartexlabs/label-studio) and it can be downloaded with `docker pull`. 
