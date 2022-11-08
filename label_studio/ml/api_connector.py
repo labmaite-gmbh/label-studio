@@ -25,7 +25,8 @@ TIMEOUT_DEFAULT = float(get_env('ML_TIMEOUT_DEFAULT', 100))  # seconds
 TIMEOUT_TRAIN = float(get_env('ML_TIMEOUT_TRAIN', 30))
 TIMEOUT_PREDICT = float(get_env('ML_TIMEOUT_PREDICT', 100))
 TIMEOUT_HEALTH = float(get_env('ML_TIMEOUT_HEALTH', 1))
-TIMEOUT_SETUP = float(get_env('ML_TIMEOUT_SETUP', 3))
+# Changed TIMEOUT_SETUP from 3 to 15 to prevent early timeout when no error
+TIMEOUT_SETUP = float(get_env('ML_TIMEOUT_SETUP', 15))
 TIMEOUT_DUPLICATE_MODEL = float(get_env('ML_TIMEOUT_DUPLICATE_MODEL', 1))
 TIMEOUT_DELETE = float(get_env('ML_TIMEOUT_DELETE', 1))
 TIMEOUT_TRAIN_JOB_STATUS = float(get_env('ML_TIMEOUT_TRAIN_JOB_STATUS', 1))
