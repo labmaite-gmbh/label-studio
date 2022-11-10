@@ -38,9 +38,9 @@ Install Label Studio locally, or deploy it in a cloud instance. Also you can try
 To build a local image with the custom changes, run:
 ```bash
 DOCKER_BUILDKIT=1 docker build . -t label-studio
-docker run -p80:8080 label-studio
+docker run --name label-studio -p8080:8080 label-studio
 ```
-Change p80 to the desired port.
+Change p8080 to the desired port.
 
 
 ### Install locally with Docker
