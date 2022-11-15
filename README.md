@@ -37,10 +37,10 @@ Install Label Studio locally, or deploy it in a cloud instance. Also you can try
 ### Install Labmaite Implementation
 To build a local image with the custom changes, run:
 ```bash
-DOCKER_BUILDKIT=1 docker build . -t label-studio
-docker run --name label-studio -p8080:8080 label-studio
+sudo DOCKER_BUILDKIT=1 docker build . -t label-studio
+sudo docker run --name label-studio -p8080:8080 label-studio
 ```
-Change p8080 to the desired port.
+This will initiate Label Studio on `http://localhost:8080`. Change p8080 to a desired port if needed.
 
 
 ### Install locally with Docker
